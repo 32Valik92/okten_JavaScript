@@ -52,6 +52,6 @@ console.log(typeof c);
 
 let nameFirst = prompt('What is your first Name?'),
     nameSecond = prompt('What is your second Name?'),
-    nameLast = prompt('What is your last Name?');
+    age = prompt('What is your age?');
 
-console.log(`Your full name is ${nameLast} ${nameFirst} ${nameSecond}?`);
+console.log(`You are ${nameFirst} ${nameSecond} and his age is ${age}.`);
