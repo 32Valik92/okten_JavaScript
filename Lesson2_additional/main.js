@@ -148,5 +148,5 @@ switch (quiz) {
         alert('You won money');
         break;
     default:
-        alert('This number is not defined')
+        alert('This number is not defined');
 }
