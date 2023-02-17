@@ -128,6 +128,7 @@ let criterionObject = {
 
 let packOfCards = []; // Наша колода карт
 
+// Формування колоди
 for (let value of criterionObject.values) {
     for (let cardSuit of criterionObject.cardSuits) {
         if (cardSuit === 'heart' || cardSuit === 'diamond') {
