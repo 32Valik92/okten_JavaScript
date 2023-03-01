@@ -74,6 +74,7 @@ document.body.appendChild(document.createElement('hr'));
 // в якому буде <h1 class='heading'>  з title  елементу, та <p class='description'> з monthDuration елементу.
 // Завдання робити через цикли.
 let div3 = document.createElement('div');
+div3.classList.add('item');
 for (let object of coursesAndDurationArray) {
     let h1 = document.createElement('h1');
     h1.classList.add('heading');
