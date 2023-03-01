@@ -4,13 +4,6 @@ let div1 = document.createElement('div');
 div1.classList.add('wrap', 'collapse', 'alpha', 'beta');
 // - додати стилі(довільні значення) : колір фону, колір тексту, розмір тексту
 div1.innerText = 'DOM = Document Object Model';
-div1.style.background = 'silver';
-div1.style.height = '150px';
-div1.style.fontSize = '40px';
-div1.style.display = 'flex';
-div1.style.justifyContent = 'center';
-div1.style.alignItems = 'center';
-div1.style.marginBottom = '5px';
 
 // - додати цей блок в body.
 document.body.appendChild(div1);
@@ -51,7 +44,7 @@ let coursesAndDurationArray = [
 let div2 = document.createElement('div');
 for (let object of coursesAndDurationArray) {
     let divObject = document.createElement('div');
-    divObject.innerText = `title: ${object.title} -------- monthDuration: ${object.monthDuration}`;
+    divObject.innerText = `Title: ${object.title} -------- MonthDuration: ${object.monthDuration}`;
     div2.append(divObject);
 }
 
@@ -69,12 +62,12 @@ document.body.appendChild(document.createElement('hr'));
 //     {title: 'FullStack', monthDuration: 7},
 //     {title: 'Frontend', monthDuration: 4}
 // ];
-//
+
 // За допомоги скрипту для кожного елементу масиву зробити <div class='item'>,
 // в якому буде <h1 class='heading'>  з title  елементу, та <p class='description'> з monthDuration елементу.
 // Завдання робити через цикли.
-let div3 = document.createElement('div');
-div3.classList.add('item');
+let divItem = document.createElement('div');
+divItem.classList.add('item');
 for (let object of coursesAndDurationArray) {
     let h1 = document.createElement('h1');
     h1.classList.add('heading');
@@ -84,10 +77,10 @@ for (let object of coursesAndDurationArray) {
     p.classList.add('description');
     p.innerText = object.monthDuration;
 
-    div3.append(h1, p);
+    divItem.append(h1, p);
 }
 
-document.body.appendChild(div3);
+document.body.appendChild(divItem);
 document.body.appendChild(document.createElement('hr'));
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -144,12 +137,13 @@ for (let simpson of simpsons) {
         pInfo = document.createElement('p'),
         image = document.createElement('img');
 
+    person.classList.add('person');
     h2.innerText = `${simpson.name} ${simpson.surname}`;
     pAge.innerText = `I'm ${simpson.age} years old`;
     pInfo.innerText = simpson.info;
     image.src = simpson.photo;
 
-    person.append(h2, pAge, pInfo, image);
+    person.append(h2, image, pAge, pInfo);
     divSimpsons.append(person);
 }
 document.body.appendChild(divSimpsons);
@@ -210,12 +204,12 @@ for (let course of coursesArray) {
         divHour = document.createElement('p'),
         ulModules = document.createElement('ul');
 
-    divCourse.style.border = '1px solid black';
+    divCourse.classList.add('divCourse');
     title.innerText = course.title;
-    divMonthAndHour.style.display = 'flex';
+    divMonthAndHour.classList.add('divMonthAndHour'); // Контейнер як на малюнку був для двох заголовків
     divMonth.innerText = `Кількість місяців - ${course.monthDuration}`;
     divHour.innerText = `Кількість годин - ${course.hourDuration}`;
-    divHour.style.marginLeft = '20px'
+    divHour.style.marginLeft = '20px';
 
     divMonthAndHour.append(divMonth, divHour);
 
@@ -268,7 +262,7 @@ buttonInput.addEventListener('click', () => {
     if (input.value >= 18) {
         alert('Ти повнолітній');
     } else if (input.value < 18 && input.value >= 1) {
-        alert('Ти не повнолітній');
+        alert('Ти неповнолітній');
     } else {
         alert('Введи нормальний вік!');
     }
