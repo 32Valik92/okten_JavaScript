@@ -134,6 +134,8 @@ let simpsons = [
 ];
 
 let divSimpsons = document.createElement('div');
+divSimpsons.classList.add('member');
+
 for (let simpson of simpsons) {
 
     let person = document.createElement('div'),
