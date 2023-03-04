@@ -1,0 +1,66 @@
+
+.divForm1 {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: gold solid 3px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.divForm1 h1 {
+    color: gold;
+    font-weight: bold;
+}
+
+.divForm1 p {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.numberBlock {
+    height: 100px;
+    width: 400px;
+    font-size: 20px;
+    border: gold solid 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    background: aquamarine;
+    font-weight: bold;
+}
+
+.divMain {
+    width: 270px;
+    border: red solid 6px;
+    box-sizing: border-box;
+
+}
+.divElements {
+    border: blue solid 4px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+.divElements p {
+    margin-bottom: 0;
+}
+
+.divButtons {
+    display: flex;
+    justify-content: space-evenly;
+    border: greenyellow solid 4px;
+
+}
